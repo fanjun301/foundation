@@ -38,11 +38,11 @@ public class QuickSortMain {
 		
 		T t = ts[start];
 		while (start < end) {
-            while (start < end && ts[end].compareTo(t) > 0) {
+            while (start < end && ts[end].compareTo(t) >= 0) {
 				end--;
 			} 			
 			ts[start] = ts[end];
-			while (start < end && ts[start].compareTo(t) < 0) {
+			while (start < end && ts[start].compareTo(t) <= 0) {
 				start++;
 			}
 			ts[end] = ts[start];
